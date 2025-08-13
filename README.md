@@ -1,89 +1,119 @@
-# Secure Encoding & Decoding System
+# 🔐 Secure Encoding & Decoding System
 
-A Python-based secure encoding and decoding system that uses a combination of:
+A secure, Python-based **message encoding and decoding** tool with **two interfaces**:
 
-- Caesar cipher (shift cipher)
-- Character rotation (shifting first character to the end and vice versa)
-- Special character token mapping (for spaces, punctuation, etc.)
-- Random padding (prefix and suffix) for added obscurity
-
-This tool allows you to encode a message securely and decode it back to the original text.
+1. **CLI Version** – Lightweight, runs in terminal, no extra libraries required.  
+2. **GUI Version** – User-friendly interface built with Tkinter & ttkbootstrap.
 
 ---
 
-## Features
+## 🔹 Features (Both Versions)
 
-- **Encode messages** using a fixed Caesar cipher with character rotation.
-- **Decode encoded messages** back to original.
-- Handles **special characters and punctuation** by mapping them to unique tokens.
-- Adds **random strings as prefix and suffix** to each encoded word to hide the message structure.
-- User-friendly command-line interface with options to encode, decode, or exit.
-- Input validation and default values for random string length.
+- **Dual Interface**
+   - CLI version for quick terminal usage
+   - GUI version for easy interaction (Windows & Linux support)
+     
+- **Security Layers:**
+   - Caesar cipher (shift cipher)
+   - Character rotation
+   - Special character token mapping
+   - Random prefix/suffix padding
 
+- **Cross-platform:**
+   - Works on Windows and Linux
+
+- **No External Dependencies for CLI**
+   - GUI uses tkinter + ttkbootstrap for modern UI
+
+- **Icon-based executable build for Windows GUI**
 ---
 
-## How to Use
+## 📂 Project Structure
+```
+SecureEncodingSystem/
+│
+├── secure_encoder_decoder.py     # Core encoding/decoding logic (used by GUI)
+├── main.py                       # GUI version
+├── cli_main.py                   # CLI version
+├── assets/
+│   └── app.ico                   # Icon for GUI executable (Windows build only)
+├── dist/
+│   ├── SecureEncoder.exe         # Built executable (Windows GUI version)
+│   └── main                      # Built executable (Linux GUI version)
+└── README.md                     # This file
 
-1. Clone the repository or download the `.py` file.
+```
+---
+
+# 🚀 How to Use
+1️⃣ **CLI Version**
+1.   Clone the repository:
    
    ```bash
    git clone https://github.com/Cryp7icSoul/SecureEncodingSystem.git
    cd SecureEncodingSystem
-   
-2. Run the script using:
+```
+2.   Run the CLI script:
+
    ```bash
-   python secure_encoding_system.py
+   python cli_main.py
+```
 
-3. Follow the on-screen instructions:
-    - 1 to Encode
-    - 2 to Decode
-    - 3 to Exit
+3.   Follow on-screen options:
+      - 1 → Encode message
+      - 2 → Decode message
+      - 3 → Exit
+---
 
-4. Enter the random string length when prompted (default = 3).
+2️⃣ **GUI Version**
+
+🖥 **Windows**
+- Navigate to the dist/ folder and run:
+  
+```bash
+SecureEncoder.exe
+ ```
+🐧 **Linux**
+- Navigate to the dist/ folder and run:
+
+```bash
+./main
+ ```
+(Make sure the file is executable: chmod +x main)
+
+---
+# 📸 Screenshots
+
+💻 **CLI Version**
+
+<img width="1907" height="1079" alt="Screenshot 2025-08-14 013459" src="https://github.com/user-attachments/assets/8fe4c6ab-8556-46a2-9ea5-bc2d56f40a34" />
 
 ---
 
-## Example
-## Encoding
-  Input:
-  ```bash
-  Hello, World!
-  ```
-  Output:
-  ```bash
-  xK9@#Khoor_COMMA__SPC__Zruog_EXCL_$0d%
-  ```
-## Decoding
-  Input:
-  ```bash
-  xK9@#Khoor_COMMA__SPC__Zruog_EXCL_$0d%
-  ``` 
-  Output:
-  ```bash
-  Hello, World!
-  ```
----
+🖥 **GUI Version**
 
-## Code Structure
-- shift_char(c, shift) - Shifts a character by a given amount for encoding.
-- unshift_char(c, shift) - Reverses the character shift for decoding.
-- random_str(length) - Generates random string padding.
-- encoding(length) - Encodes input message with rotation, shift, and padding.
-- decoding(length) - Decodes input message by removing padding, reversing token mapping, shift, and rotation.
+<img width="1919" height="1079" alt="Screenshot 2025-08-14 013954" src="https://github.com/user-attachments/assets/eaeb28db-fc30-4175-a6ac-30ee3b1c4d60" />
 
 ---
+# 🧠 Requirements
 
-## 🧠 Requirements
+**CLI:**
+- Python 3.x
+- random, string (built-in modules)
 
-- Python 3.x  
-- No external libraries required (random and string are built-in)
+**GUI:**
+- Python 3.x
+- tkinter (built-in in most Python installs)
+- ttkbootstrap (pip install ttkbootstrap)
 
-## ⚖️ License
+---
+# ⚖️ License
 
 - This project is open source and free to use.  
 - Feel free to modify and share.
 
-## 👨‍💻 Author
+---
+# 👨‍💻 Author
 
 - Developed by **Muhammad Hamad**  
 - 🛡️ Certified Ethical Hacker | 🔍 Penetration Tester  
@@ -91,3 +121,4 @@ This tool allows you to encode a message securely and decode it back to the orig
 - 🌐 [GitHub Profile](https://github.com/Cryp7icSoul/)
 - 🔗 [LinkedIn Profile](https://www.linkedin.com/in/cryp7icsoul/)
 - 🎯 [TryHackMe Profile](https://tryhackme.com/p/Cryp7icSoul)
+
