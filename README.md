@@ -32,8 +32,6 @@ A secure, Python-based **message encoding and decoding** tool with **two interfa
 ```
 SecureEncodingSystem/
 │
-├── secure_encoder_decoder.py     # Core encoding/decoding logic (used by GUI)
-├── main.py                       # GUI version
 ├── cli_main.py                   # CLI version
 ├── assets/
 │   └── app.ico                   # Icon for GUI executable (Windows build only)
