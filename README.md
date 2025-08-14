@@ -54,7 +54,7 @@ SecureEncodingSystem/
 2.   Run the CLI script:
 
    ```bash
-   python cli_main.py
+   python3 cli_main.py
 ```
 
 3.   Follow on-screen options:
