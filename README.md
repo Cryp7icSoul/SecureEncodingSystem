@@ -99,11 +99,6 @@ SecureEncoder.exe
 - Python 3.x
 - random, string (built-in modules)
 
-**GUI:**
-- Python 3.x
-- tkinter (built-in in most Python installs)
-- ttkbootstrap (pip install ttkbootstrap)
-
 ---
 # ⚖️ License
 
